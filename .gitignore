@@ -1,4 +1,8 @@
+*.dsk
+*.identcache
 *.local
+*.~*
+__*.
 /sourcecode/utf8check.res
 /sourcecode/bin/Win32/utf8check.exe
 /sourcecode/bin/Win64/utf8check.exe
