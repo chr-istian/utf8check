@@ -11,17 +11,25 @@ Encoding errors can cause build aborts or worse unrecognized akward characters i
 Usage
 -----
 
-utf8check.exe [Options] \<pathname\>
-  
-  Parameters
-  pathname: file- or directoryname
-  
-  Options
-  /brief /b        - only log errors to stdout
-  /ignore-bom /ib  - ignore missing BOM
-  /e:<extensions>  - semicolon separated list of file extensions
-                     e.g. /e:pas;cpp;java;txt
-  /s               - recurse subdirectories
-  
-  Return value     - ExitCode 0, if no encoding errors were detected
-                     Exitcode 1, if one or more files have encoding errors
+    utf8check.exe [Options] <pathname>
+
+**Parameters**
+
+    pathname: file- or directoryname
+
+**Options**
+
+    /brief /b        - only log errors to stdout
+    /ignore-bom /ib  - ignore missing BOM
+    /e:<extensions>  - semicolon separated list of file extensions
+    /s               - recurse subdirectories
+
+**Return value**
+- ExitCode 0, if no encoding errors were detected
+- Exitcode 1, if one or more files have encoding errors  
+
+**Example**
+
+     utf8check.exe /s /e:pas;cpp;java;txt D:\Development
+
+Checks all files in directory *D:\\Development* and it's subdirectories with the file extensions "pas", "cpp", "java" and "txt" for correct utf-8 encoding including a BOM.
