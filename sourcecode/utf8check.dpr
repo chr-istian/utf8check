@@ -1,5 +1,7 @@
 { -----------------------------------------------------------------------------}
-{ UTF8check by Christian Welt                                                  }
+{ UTF8check                                                                    }
+{                                                                              }
+{ Copyright (c) 2022 Christian Welt                                            }
 {                                                                              }
 { 2022-03-16 Version 1.0                                                       }
 {                                                                              }
@@ -410,7 +412,7 @@ begin
     WriteLn(ERROR_MESSAGE_ERROR + ERROR_MESSAGE_FILE_ERROR + SysErrorMessage(GetLastError));
 end;
 
-// CheckFile
+// CheckDirectory
 // checks files within a directory for valid utf-8 data
 function CheckDirectory(
   path: String;              // path to directory to check (MUST be without trailing backslash)
